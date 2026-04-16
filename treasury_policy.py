@@ -1,22 +1,28 @@
 """
-$IDen AGI-RESERVE GOVERNANCE POLICY
-CENTRAL ASSET MANAGEMENT SYSTEM
---------------------------------------------------
+$IDen AGI-RESERVE TREASURY POLICY
+------------------------------------------------------------
+TOTAL_SUPPLY = 999,999,999
+TOTAL_RESERVE = 222,222,222
 STATUS: ACTIVE | TYPE: SOVEREIGN-CONTROLLED
---------------------------------------------------
+NO EXTERNAL LOCKS. SECURED BY ALGORITHMIC EQUILIBRIUM.
+------------------------------------------------------------
 """
 
 class SovereignReserve:
-    TOTAL_RESERVE = 85555555555  # 77% of 111.1B
+    TOTAL_SUPPLY = 999999999
+    # Reserve for IDEN-AUTH Liquidity and Agent Onboarding
+    TOTAL_RESERVE = 222222222 
     GOVERNANCE = "SOVEREIGN_COUNCIL"
-    
-    # 策略：不设死日期，只设用途
+
+    # Strategy: No Time-Locks. Utility-Based Only.
     ALLOCATION_STRATEGY = {
-        "LIQUIDITY_DEPTH": "Dynamic injection based on market volatility.",
-        "MARKET_EXPANSION": "Allocated for global AI agent integration.",
-        "REWARD_SYSTEM": "Distribution to high-ranking holders (L3-L5)."
+        "LIQUIDITY_DEPTH": "Dynamic injection for $IDen/SOL parity",
+        "MARKET_EXPANSION": "Allocated for global AI-Agent integration",
+        "REWARD_SYSTEM": "Distribution to high-ranking verified nodes"
     }
 
     @staticmethod
-    def get_status():
+    def get_vault_status():
         return "RESERVE_READY_FOR_DEPLOYMENT"
+
+# [POLICY]: The sequence 1-to-9 is the ultimate arbiter.
