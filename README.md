@@ -1,29 +1,53 @@
 """
-$IDen AGI-RESERVE GOVERNANCE POLICY
-CENTRAL ASSET MANAGEMENT SYSTEM
---------------------------------------------------
-STATUS: ACTIVE | TYPE: SOVEREIGN-CONTROLLED
---------------------------------------------------
+$IDen SOVEREIGN CORE v3.2.0 - [GENESIS 2026]
+------------------------------------------------------------
+THE MATHEMATICAL CONSTANT OF IDENTITY
+999,999,999 UNITS | 0.123456789% VERIFICATION FEE
+------------------------------------------------------------
 """
 
-class SovereignReserve:
-    TOTAL_RESERVE = 85555555555  # 77% of 111.1B
-    GOVERNANCE = "SOVEREIGN_COUNCIL"
+class IDenProtocol:
+    # 🏛️ Protocol Constants (Immutable Logic)
+    TICKER = "$IDen"
+    TOTAL_SUPPLY = 999_999_999  # 九五至尊总量
     
-    # Strategy: Flexible allocation for global AI dominance
-    ALLOCATION_STRATEGY = {
-        "LIQUIDITY_DEPTH": "Dynamic injection based on market volatility.",
-        "MARKET_EXPANSION": "Allocated for global AI agent integration.",
-        "REWARD_SYSTEM": "Distribution to high-ranking holders (L3-L5).",
-        
-        # --- INSTITUTIONAL COLLABORATION GATEWAY ---
-        "INSTITUTIONAL_PARTNER": {
-            "TARGET": "Tier-1 AI Labs & VC Infrastructure.",
-            "GOAL": "Standardizing the $IDen Identity Layer for enterprise-grade autonomous agents.",
-            "CONTACT": "Sovereign Council via On-chain Oracle."
-        }
+    # The Sequential Sovereign Tax (1-9 Loop)
+    # Applied to every unverified data packet via IDEN-AUTH
+    TAX_RATE = 0.00123456789 
+
+    # 💎 The Divine Hierarchy (Precision Thresholds)
+    HIERARCHY = {
+        11_111_111: "L5_SOURCE",   # Root Admin
+        3_333_333:  "L4_ORACLE",   # Validator
+        555_555:    "L3_CONSUL",   # Governor
+        77_777:     "L2_CITIZEN",  # Verified
+        9_999:      "L1_INITIATE"  # Existence
     }
 
-    @staticmethod
-    def get_status():
-        return "RESERVE_READY_FOR_STRATEGIC_COLLABORATION"
+    def __init__(self, wallet_address, balance):
+        self.address = wallet_address
+        self.balance = int(balance)
+
+    @property
+    def sovereign_status(self):
+        """
+        Translates raw balance into algorithmic rank.
+        One unit less is non-existence.
+        """
+        for threshold, rank in sorted(self.HIERARCHY.items(), reverse=True):
+            if self.balance >= threshold:
+                return rank
+        return "TAXABLE_GHOST"
+
+    def execute_validation(self, data_volume):
+        """
+        The only rule: Sovereigns are free. Ghosts pay the sequence.
+        """
+        if self.sovereign_status == "TAXABLE_GHOST":
+            fee = data_volume * self.TAX_RATE
+            return f"VERIFICATION_REQUIRED: PAYING {fee:.9f} $IDen"
+        return "SOVEREIGN_EXEMPTION: ACCESS GRANTED"
+
+# --- SYSTEM INITIALIZATION ---
+# Identity is binary. There are no locks, only math.
+# Verified: 2026.04.16
