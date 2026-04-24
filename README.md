@@ -9,7 +9,7 @@ THE MATHEMATICAL CONSTANT OF IDENTITY
 class IDenProtocol:
     # 🏛️ Protocol Constants (Immutable Logic)
     TICKER = "$IDen"
-    TOTAL_SUPPLY = 999_999_999  # 九五至尊总量
+    TOTAL_SUPPLY = 999_999_999  
     
     # The Sequential Sovereign Tax (1-9 Loop)
     # Applied to every unverified data packet via IDEN-AUTH
